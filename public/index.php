@@ -17,11 +17,11 @@
   $route = explode('/', $uri[0]);
 
   # Seleciona a controller
-  if(isset($route[1])) {
-    $controller = $route[1];
+  if(empty($route[1])) {
+    $controller = $_config->defaultController;
   }
   else {
-    $controller = $_config->defaultController;
+    $controller = $route[1];
   }
   $controller = preg_replace('/[^a-zA-Z0-9_]/', '', $controller);
 
