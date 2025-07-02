@@ -29,7 +29,7 @@ while [ true ]; do
   fi
 
   if [[ ! -e $phpPIDFile ]] || [[ ! -d "/proc/$(cat $phpPIDFile)" ]]; then
-    echo 'PHP FPM...'
+    echo 'Starting PHP FPM...'
     php-fpm83 -g $phpPIDFile
   fi
 
