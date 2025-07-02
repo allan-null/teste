@@ -5,6 +5,7 @@
 
   $_config = (object) [
     # Geral
+    'baseURL' => 'http://127.0.0.1:8080', # URL base para carregar os assets
     'title' => 'Teste', # Nome do site
     'defaultController' => 'employee', # Controller padrão
     'defaultAction' => 'index', # Ação padrão
