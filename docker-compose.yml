@@ -1,0 +1,10 @@
+services:
+  teste:
+    container_name: teste
+    restart: unless-stopped
+    build: ./docker
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8080:80/tcp"
+    command: /var/www/html/docker/start.sh
