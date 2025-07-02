@@ -11,6 +11,7 @@
       <tr>
         <th scope='col'>Departamento</th>
         <th scope='col'>Salário total</th>
+        <th scope='col'>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -21,6 +22,14 @@
       <tr>
         <td><?=htmlspecialchars($employee['department'])?></td>
         <td>R$ <?=number_format($employee['total_salary'], 2, ',', '.')?></td>
+        <td>
+          <form method='post' action='<?=$_config->baseURL?>/employee/mass-rise-5'>
+            <input type='hidden' name='department' value='<?=htmlspecialchars($employee['department'])?>'>
+            <button type='submit' class='btn btn-sm btn-danger'>
+              <i class='bi bi-currency-dollar' aria-hidden='true'></i> Aumento de 5%
+            </button>
+          </form>
+        </td>
       </tr>
 <?php
         }

@@ -165,16 +165,18 @@
     public function mass_rise_5() {
       global $_config;
 
+      $department = $_POST['department'];
+
       # Checa se o usuário já passou pela página de confirmação
       # da ação.
       if(isset($_GET['confirmed'])) {
-        employeeModel::mass_rise(5);
+        employeeModel::mass_rise(5, $_POST['department']);
         header('Location: ' . $_config->baseURL . '/employee?success');
         exit;
       }
       else {
         viewLoad('mass_rise_employee', [
-          'employee' => $employee
+          'department' => $department
         ]);
       }
     }

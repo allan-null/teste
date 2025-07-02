@@ -89,9 +89,6 @@
   <h1 class="h2"></h1>
   <div class="btn-toolbar mb-2 mb-md-0 text-right">
     <div class="btn-group me-2">
-      <a type='button' class='btn btn-sm btn-danger' href='<?=$_config->baseURL?>/employee/mass-rise-5'>
-        <i class='bi bi-currency-dollar' aria-hidden='true'></i> Aumento de 5% em massa
-      </a>
     </div>
   </div>
 </div>

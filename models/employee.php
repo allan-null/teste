@@ -162,14 +162,17 @@
 
     # Aumento de salário em massa.
     # Aceita um número de argumento como percentual de aumento.
-    static public function mass_rise($percentage) {
+    static public function mass_rise($percentage, $department) {
       global $_db;
 
       $decimal = $percentage / 100;
       try {
-        $_db->query("
+        $stmt = $_db->prepare("
           UPDATE employees SET salary = (salary * $decimal + salary)
+          WHERE department = ?
         ");
+        $stmt->bind_param('s', $department);
+        $stmt->execute();
       }
       catch(exeception $e) {
         die($e->getmessage());
