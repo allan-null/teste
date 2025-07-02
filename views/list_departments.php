@@ -35,7 +35,7 @@
         }
     }
     else {
-      echo '<tr><td colspan="2">Nenhum departamento encontrado.</td></tr>';
+      echo '<tr><td colspan="3">Nenhum departamento encontrado.</td></tr>';
     }
 ?>
     </tbody>
