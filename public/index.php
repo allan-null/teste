@@ -23,7 +23,7 @@
   else {
     $controller = $_config->defaultController;
   }
-  $controller = preg_replace('/[^a-zA-Z0-9_\.\-]/', '', $controller);
+  $controller = preg_replace('/[^a-zA-Z0-9_]/', '', $controller);
 
   $class = "\\app\\controllers\\$controller";
 
