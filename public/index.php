@@ -13,7 +13,11 @@
   require_once('../controllers/report.php');
 
   # Interpretando as rotas
-  $uri = explode('?', $_SERVER['REQUEST_URI']);
+  $fullURL = $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'];
+  if($_SERVER['REQUEST_URI'] != '/') {
+    $fullURL .= $_SERVER['REQUEST_URI'];
+  }
+  $uri = explode('?', str_replace($_config->baseURL, '', $fullURL));
   $route = explode('/', $uri[0]);
 
   # Seleciona a controller
