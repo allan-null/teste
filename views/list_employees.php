@@ -7,13 +7,13 @@
       <?php
         if(isset($_GET['recentlyHired'])) {
       ?>
-        <a type='button' class='btn btn-sm btn-outline-primary' href='/employee'>
+        <a type='button' class='btn btn-sm btn-outline-primary' href='<?=$_config->baseURL?>/employee'>
           <i class='bi bi-list-ol' aria-hidden='true'></i> Ver todos
         </a>
       <?php
         }
       ?>
-        <a type='button' class='btn btn-sm btn-outline-primary' href='/employee/new'>
+        <a type='button' class='btn btn-sm btn-outline-primary' href='<?=$_config->baseURL?>/employee/new'>
           <i class='bi bi-plus-lg' aria-hidden='true'></i> Adicionar
         </a>
       </div>
@@ -63,10 +63,10 @@
           )->format('d/m/Y'))?>
         </td>
         <td>
-          <a type='button' class='btn btn-sm btn-outline-primary' href='/employee/edit/<?=$employee['id']?>'>
+          <a type='button' class='btn btn-sm btn-outline-primary' href='<?=$_config->baseURL?>/employee/edit/<?=$employee['id']?>'>
             <i class='bi bi-pencil-square' aria-hidden='true'></i> Editar
           </a>
-          <a type='button' class='btn btn-sm btn-outline-danger' href='/employee/delete/<?=$employee['id']?>'>
+          <a type='button' class='btn btn-sm btn-outline-danger' href='<?=$_config->baseURL?>/employee/delete/<?=$employee['id']?>'>
             <i class='bi bi-trash' aria-hidden='true'></i> Excluir
           </a>
         </td>
@@ -89,7 +89,7 @@
   <h1 class="h2"></h1>
   <div class="btn-toolbar mb-2 mb-md-0 text-right">
     <div class="btn-group me-2">
-      <a type='button' class='btn btn-sm btn-danger' href='/employee/mass-rise-5'>
+      <a type='button' class='btn btn-sm btn-danger' href='<?=$_config->baseURL?>/employee/mass-rise-5'>
         <i class='bi bi-currency-dollar' aria-hidden='true'></i> Aumento de 5% em massa
       </a>
     </div>

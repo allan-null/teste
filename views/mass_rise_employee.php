@@ -4,7 +4,7 @@
   <h1 class='h2'>Confirma o aumento de 5% para todos os funcionários?</h1>
     <div class='btn-toolbar mb-2 mb-md-0'>
       <div class='btn-group me-2'>
-        <a type='button' class='btn btn-sm btn-outline-primary' href='/employee'>
+        <a type='button' class='btn btn-sm btn-outline-primary' href='<?=$_config->baseURL?>/employee'>
           <i class='bi bi-list-ol' aria-hidden='true'></i> Voltar à listagem
         </a>
       </div>
@@ -12,10 +12,10 @@
   </div>
   <!-- Término do título -->
 
-  <a type='button' class='btn btn-sm btn-outline-danger' href='/employee/mass-rise-5?confirmed'>
+  <a type='button' class='btn btn-sm btn-outline-danger' href='<?=$_config->baseURL?>/employee/mass-rise-5?confirmed'>
     <i class='bi bi-currency-dollar' aria-hidden='true'></i> Confirmar
   </a>
-  <a type='button' class='btn btn-sm btn-outline-primary' href='/employee'>
+  <a type='button' class='btn btn-sm btn-outline-primary' href='<?=$_config->baseURL?>/employee'>
     <i class='bi bi-arrow-left' aria-hidden='true'></i> Voltar
   </a>
 </main>

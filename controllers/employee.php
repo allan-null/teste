@@ -43,6 +43,8 @@
 
     # Exclui um funcionário pelo ID.
     public function delete($id) {
+      global $_config;
+
       $employee = new employeeModel($id);
 
       # Se o ID não existir, retorna a páginad e 404.
@@ -56,7 +58,7 @@
           $employee->delete();
           
           # Redireciona com mensagem de sucesso genérica.
-          header('Location: /employee?success');
+          header('Location: ' . $_config->baseURL . '/employee?success');
           exit;
         }
         else {
@@ -70,6 +72,8 @@
 
     # Adiciona ou atualiza os dados de um funcionários.
     public function save() {
+      global $_config;
+
       # Definindo matriz com dados de entrada.
       $input = [
         'first_name' => $_POST['first_name'],
@@ -105,7 +109,7 @@
           $employee->save();
 
           # Redireciona com mensagem de sucesso genérica.
-          header('Location: /employee?success');
+          header('Location: ' . $_config->baseURL . '/employee?success');
           exit;
         }
         else {
@@ -142,7 +146,7 @@
             $employee->save();
 
             # Redireciona com mensagem de sucesso genérica.
-            header('Location: /employee?success');
+            header('Location: ' . $_config->baseURL . '/employee?success');
             exit;
           }
           else {
@@ -159,11 +163,13 @@
 
     # Aumenta o salário de todos os funcionários em 5%
     public function mass_rise_5() {
+      global $_config;
+
       # Checa se o usuário já passou pela página de confirmação
       # da ação.
       if(isset($_GET['confirmed'])) {
         employeeModel::mass_rise(5);
-        header('Location: /employee?success');
+        header('Location: ' . $_config->baseURL . '/employee?success');
         exit;
       }
       else {

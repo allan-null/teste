@@ -4,10 +4,10 @@
   <h1 class='h2'>Editando funcionário de ID <?=$employee->id?></h1>
     <div class='btn-toolbar mb-2 mb-md-0'>
       <div class='btn-group me-2'>
-        <a type='button' class='btn btn-sm btn-outline-primary' href='/employee'>
+        <a type='button' class='btn btn-sm btn-outline-primary' href='<?=$_config->baseURL?>/employee'>
           <i class='bi bi-list-ol' aria-hidden='true'></i> Voltar à listagem
         </a>
-        <a type='button' class='btn btn-sm btn-outline-primary' href='/employee/new'>
+        <a type='button' class='btn btn-sm btn-outline-primary' href='<?=$_config->baseURL?>/employee/new'>
           <i class='bi bi-plus-lg' aria-hidden='true'></i> Adicionar
         </a>
       </div>
@@ -17,8 +17,8 @@
 
 <?php
   viewLoad('employee_form', [
-    'formAction' => '/employee/save',
-    'resetAction' => '/employee/new',
+    'formAction' => $_config->baseURL . '/employee/save',
+    'resetAction' => $_config->baseURL . '/employee/new',
     'employee' => $employee,
     'errors' => $errors,
   ], false);

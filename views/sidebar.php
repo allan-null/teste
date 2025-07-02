@@ -7,17 +7,17 @@
     <div class='offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto'>
       <ul class='nav flex-column'>
         <li class='nav-item'>
-          <a class='nav-link d-flex align-items-center gap-2<?=($controller == 'employee' && !isset($_GET['recentlyHired']) ? " active' aria-current='page'" : "'")?> href='/employee'>
+          <a class='nav-link d-flex align-items-center gap-2<?=($controller == 'employee' && !isset($_GET['recentlyHired']) ? " active' aria-current='page'" : "'")?> href='<?=$_config->baseURL?>/employee'>
             <i class='bi bi-people' aria-hidden='true'></i> Funcionários
           </a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link d-flex align-items-center gap-2<?=($controller == 'employee' && isset($_GET['recentlyHired']) ? " active' aria-current='page'" : "'")?> href='/employee?recentlyHired'>
+          <a class='nav-link d-flex align-items-center gap-2<?=($controller == 'employee' && isset($_GET['recentlyHired']) ? " active' aria-current='page'" : "'")?> href='<?=$_config->baseURL?>/employee?recentlyHired'>
             <i class='bi bi-clock-history'></i> Funcionários contratos nos últimos 6 meses
           </a>
         </li>
         <li class='nav-item'>
-          <a class='nav-link d-flex align-items-center gap-2<?=($controller == 'report' && $action == 'salary_by_department' ? " active' aria-current='page'" : "'")?> href='/report/salary-by-department'>
+          <a class='nav-link d-flex align-items-center gap-2<?=($controller == 'report' && $action == 'salary_by_department' ? " active' aria-current='page'" : "'")?> href='<?=$_config->baseURL?>/report/salary-by-department'>
             <i class='bi bi-file-earmark-spreadsheet'></i> Salário por departamento
           </a>
         </li>

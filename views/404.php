@@ -9,7 +9,9 @@
     <h1 class='h2'>Página não encontrada - erro 404</h1>
     <div class='btn-toolbar mb-2 mb-md-0'>
       <div class='btn-group me-2'>
-        <a type='button' class='btn btn-sm btn-primary' href='/'><i class='bi bi-house-door' aria-hidden='true'></i> Início</a>
+        <a type='button' class='btn btn-sm btn-primary' href='<?=$_config->baseURL?>/'>
+          <i class='bi bi-house-door' aria-hidden='true'></i> Início
+        </a>
       </div>
     </div>
   </div>
